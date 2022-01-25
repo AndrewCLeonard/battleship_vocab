@@ -4,7 +4,7 @@
 
 Battleship is a popular boardgame in the US. If you've never played, check out [this link](https://www.thesprucecrafts.com/the-basic-rules-of-battleship-411069) for a summary.
 
-After secretly positioning their ships, players take turns guessing an XY coordinate on their opponent's board, and the other player tells them if it is a "hit or "miss." The game is over when one side's ships are all sunk.
+Players cannot see the positions of each other's ships. After secretly positioning their ships, players take turns guessing an XY coordinate on their opponent's board. The other player tells them if it is a "hit or "miss." The game is over when one side's ships are all sunk.
 
 <p style="font-size: 0.9rem;font-style: italic;"><img style="display: block;" src="https://live.staticflickr.com/1961/45547345711_e2701f67b0_b.jpg" alt="The Board Game of Battleship"><a href="https://www.flickr.com/photos/30478819@N08/45547345711">"The Board Game of Battleship"</a><span> by <a href="https://www.flickr.com/photos/30478819@N08">wuestenigel</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=f470f047-1729-426c-807f-1a1f6a370acd" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /></a></p>
 
@@ -36,7 +36,7 @@ Traditionally, the grid of play is something like this. We've marked an "X" in F
 | 6   |     | O   |     |     |     |     |     |
 | 7   |     |     |     |     |     |     |     |
 
-Instead of the "spreadsheet-esque" letter/number combination, (e.g. "F3") we will use vocab words. Students will say "pollo amarillo" instead of F3. Instead of "B3," you say "gato gris." Spanish vocab is used in this example, but it could easily work for any subject.
+For example, ntudents will say "pollo amarillo" instead of F3, or "gato gris" instead of "B3." Spanish vocab is used in this example, and it could easily work for other subjects.
 
 |          | perro | gato | gallino | caballo | sapo | pollo | pato |
 | -------- | ----- | ---- | ------- | ------- | ---- | ----- | ---- |
@@ -77,17 +77,19 @@ Authentication vs. Authorization will be tricky
 -   authentication = allowing people to access a different part of the application
 -   Instructors have their own "teacher" admin-level login
 -   Teachers can create and save class rosters
-    -   Teachers may Copy/paste class rosters from a spreadsheet or document to populate player lists
-    -   App will save list(s) of student names for instructors to re-access once they log back in
--   Teachers can group students in various ways:
-    -   class
-    -   grade
-    -   school
+    -   Teachers may copy/paste class rosters from a spreadsheet or document to populate player lists
+    -   The app will save lists of student names in the instructor account for teachers to re-access when their once again logged in
+    -   Teachers can create groups of students and label these groups in various ways:
+        -   class (e.g. "Mrs. Balane's class" or "3rd period")
+        -   grade (e.g. )
+        -   school
+        -   custom name?
 
 #### Student Accounts
 
+-   Instructor invites students to join the game
 -   students create their own "student" logins
-    -   option to have "picture" login, where students select an image or series of images?
+    -   for younger students, option to have "picture" login, where students select an image or series of images?
 
 ### Gameplay
 
@@ -101,7 +103,7 @@ Authentication vs. Authorization will be tricky
 
 #### Game Setup by Instructor
 
-The instructor will...
+Before students can start a game, the instructor will...
 
 -   choose the size of the board (from 5x5 up to 10x10? TBD)
 -   determine the sizes and number of desserts, e.g. their shapes and how many squares long for each
@@ -116,13 +118,33 @@ As a student/player...
 
 -   I can play other students online
 -   I have ability to choose the placement of ships on my grid before the game begins
-    -   I can rotate the
--   I see 2 grids on my screen:
-    -   "my ships"
-    -   "enemy ships"
+    -
+-   I can rotate the ships to orient vertically or horizontally
+-   I click "ready" when my ships are all set to go
+    -   I'm unable to click ready if all my ships aren't in position
 
-### As a user during the game
+### User display during the game
 
--   When opponent calls the coordinates to attack, they click on that square on their board. The other player needs to click on the matching square
--   square grids change colors according to "hits" and "misses" on both the "my ships grid" and the "enemy ships grid"
--   ships change to a different color when they are sunk
+#### Display Setup
+
+-   On each player's screen:
+
+    -   "my ships" grid
+    -   "enemy ships" grid
+    -   up-to-date list of my ships and their health status, indicating where they've been hit
+    -   ships change to a different color when they are sunk
+
+### Gameplay
+
+#### Choose Who Goes First
+
+-   Option to choose who goes first, or have a virtual coin flip
+
+#### Actions During Each Turn
+
+-   When opponent calls the coordinates to attack, they click on that square on their board.
+-   After each player makes a guess, that square grid changes color according to whether it's a "hit" or "miss" on both the "my ships grid" and the "enemy ships grid"
+-   The player's display updates ship damage as necessary (this requirement also listed above in "Display Setup")
+
+#### Game Ending
+-   When all of a player's ships are sunk, shows victory and defeat messages to the players

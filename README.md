@@ -54,8 +54,27 @@ _The GitHub issues below define project scope and goals._
 
 ### Account Management
 
+#### Tech Needed for Authentication
+
+-   Express
+-   Handlebars
+-   Node
+-   password hashing
+    -   does passport.js include password hashing?
+    -   bcrypt if not included in passport.js
+-   authentication options
+    -   passport.js (library incorporates json web tokens and OAuth)
+    -   do it from scratch with json web tokens (JWT) [Node.js with Passport Authentication](https://www.youtube.com/watch?v=7nafaH9SddU)
+    -   OAuth- could allow Google logins
+        -   OAuth = protocol
+        -   AuthO = a company
+-   need regex [Omar-recommended tutorial: What is Regex?](https://www.youtube.com/watch?v=r6I-Ahc0HB4)
+
 #### Instructor Accounts
 
+Authentication vs. Authorization will be tricky
+
+-   authentication = allowing people to access a different part of the application
 -   Instructors have their own "teacher" admin-level login
 -   Teachers can create and save class rosters
     -   Teachers may Copy/paste class rosters from a spreadsheet or document to populate player lists
@@ -70,7 +89,17 @@ _The GitHub issues below define project scope and goals._
 -   students create their own "student" logins
     -   option to have "picture" login, where students select an image or series of images?
 
-### Game Setup by Instructor
+### Gameplay
+
+#### Gameplay Tech Needed
+
+-   drag/drop functionality
+    -   HTML 5 has drag/drop API, but look on NPM
+        -   sortablejs
+        -   dragula
+    -   don't use jQuery for drag/drop. Learn e.g. React in near future
+
+#### Game Setup by Instructor
 
 The instructor will...
 
@@ -85,6 +114,7 @@ The instructor will...
 
 As a student/player...
 
+-   I can play other students online
 -   I have ability to choose the placement of ships on my grid before the game begins
     -   I can rotate the
 -   I see 2 grids on my screen:
